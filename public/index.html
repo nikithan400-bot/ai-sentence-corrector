@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AI Sentence Corrector</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="app">
+
+        <!-- HEADER -->
+        <header class="header">
+
+            <div class="logo">
+                AI
+            </div>
+
+            <div class="header-text">
+
+                <h1>AI Sentence Corrector</h1>
+
+                <p>
+                    Improve grammar, spelling and sentence structure with AI.
+                </p>
+
+            </div>
+
+        </header>
+
+
+        <!-- MAIN CARD -->
+        <section class="main-card">
+
+            <!-- LEFT SECTION -->
+            <div class="input-section">
+
+                <div class="section-title">
+
+                    <strong>Your Sentence</strong>
+
+                    <span id="charCount">
+                        0 / 1000
+                    </span>
+
+                </div>
+
+
+                <textarea
+                    id="sentence"
+                    maxlength="1000"
+                    placeholder="Example: i am working in this company from three years..."
+                ></textarea>
+
+
+                <div class="input-info">
+
+                    <span id="wordCount">
+                        0 words
+                    </span>
+
+                    <span>
+                        Ctrl + Enter to correct
+                    </span>
+
+                </div>
+
+
+                <div class="button-row">
+
+                    <button
+                        id="correctBtn"
+                        onclick="correctSentence()"
+                    >
+                        Correct Sentence
+                    </button>
+
+                    <button
+                        id="clearBtn"
+                        onclick="clearText()"
+                    >
+                        Clear
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- RIGHT SECTION -->
+            <div class="output-section">
+
+                <div class="section-title">
+
+                    <strong>Corrected Sentence</strong>
+
+                    <button
+                        id="copyBtn"
+                        onclick="copyResult()"
+                    >
+                        Copy
+                    </button>
+
+                </div>
+
+
+                <div
+                    id="result"
+                    class="result-box"
+                >
+                    Your corrected sentence will appear here.
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- FEATURES -->
+        <section class="features">
+
+            <div class="feature-card">
+
+                <div class="check">
+                    ✓
+                </div>
+
+                <div>
+                    <strong>Grammar</strong>
+
+                    <p>
+                        Fix common grammar mistakes
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="feature-card">
+
+                <div class="check">
+                    ✓
+                </div>
+
+                <div>
+                    <strong>Spelling</strong>
+
+                    <p>
+                        Correct spelling and punctuation
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="feature-card">
+
+                <div class="check">
+                    ✓
+                </div>
+
+                <div>
+                    <strong>AI Assisted</strong>
+
+                    <p>
+                        Improve sentence readability
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- LOADING -->
+        <div
+            id="loading"
+            class="loading"
+        >
+            ✨ AI is correcting your sentence...
+        </div>
+
+
+        <!-- FOOTER -->
+        <footer>
+
+            AI-assisted corrections may vary. Review important content before use.
+
+        </footer>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
